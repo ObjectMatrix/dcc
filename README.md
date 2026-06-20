@@ -1,11 +1,9 @@
-Here's the raw Markdown source — copy everything in the block below exactly as-is (including the `#`, `|`, `-`, and `>` characters) and paste it into your `.md` file on GitHub:
 
-
-# Robotics for Kids: ESP32 Track — DCC Course Catalog
+# Robotics for Kids: ESP32 Track - DCC Course Catalog
 
 A progressive curriculum for ages 10–15, built around the ESP32 microcontroller.
 
-## Tier 1 — Foundations (Ages 10–11)
+## Tier 1 — Foundations
 
 | Code | Title | Project |
 |------|-------|---------|
@@ -15,7 +13,7 @@ A progressive curriculum for ages 10–15, built around the ESP32 microcontrolle
 
 > **Tier 1 Learning Outcomes:** GPIO input/output, PWM fundamentals, analog reading, basic conditionals, first program upload.
 
-## Tier 2 — Sensors, Display & Networking (Ages 11–13)
+## Tier 2 - Sensors, Display & Networking
 
 | Code | Title | Project |
 |------|-------|---------|
@@ -24,7 +22,7 @@ A progressive curriculum for ages 10–15, built around the ESP32 microcontrolle
 
 > **Tier 2 Learning Outcomes:** I2C communication, WiFi/HTTP basics, sensor-to-display pipelines, web server fundamentals.
 
-## Tier 3 — Wireless Systems & Advanced Control (Ages 13–15)
+## Tier 3 — Wireless Systems & Advanced Control
 
 | Code | Title | Project |
 |------|-------|---------|
@@ -47,9 +45,9 @@ A progressive curriculum for ages 10–15, built around the ESP32 microcontrolle
 
 ## Program Summary
 
-- **Tier 1 — DCC 100:** Foundations of Embedded Electronics
-- **Tier 2 — DCC 200:** Sensors, Networking & Display Systems
-- **Tier 3 — DCC 300:** Wireless Systems & Applied Robotics
+- **Tier 1 - DCC 100:** Foundations of Embedded Electronics
+- **Tier 2 - DCC 200:** Sensors, Networking & Display Systems
+- **Tier 3 - DCC 300:** Wireless Systems & Applied Robotics
 
 **Total:** 7 hands-on projects · 14 sessions · ~21 instructional hours
 
