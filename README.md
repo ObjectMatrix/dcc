@@ -33,7 +33,7 @@ A progressive curriculum for ages 10–15, built around the ESP32 microcontrolle
 
 ## Full Catalog Table
 
-| Code | Course Title | Core Skill | Hardware Focus | Age |
+| Code | Course Title | Core Skill | Hardware Focus | 
 |------|--------------|-----------|-----------------|-----|
 | DCC 101 | Intro to Circuits & GPIO | Digital I/O, PWM | LED |
 | DCC 102 | Analog Sensing Basics | ADC, thresholds | LDR |
