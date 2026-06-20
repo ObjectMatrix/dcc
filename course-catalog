@@ -1,4 +1,4 @@
-# Course Design — DCC Catalog (Revised)
+# Course Design — DCC Catalog
 
 ## Full Course Catalog
 
@@ -36,7 +36,7 @@
 
 ---
 
-## Full Catalog Table (Copy-Paste Ready)
+## Full Catalog Table
 
 | Code | Course Title | Core Skill | Hardware Focus | Age |
 |------|--------------|-----------|-----------------|-----|
@@ -50,16 +50,19 @@
 
 ---
 
-## Note on the Gap
+## Suggested Program-Level Title
 
-You've now dropped the Line-Following Robot (203), Reaction Game (204), and Bluetooth RC Car (301) from the formal catalog — worth flagging that **DCC 203 was your core motor-control / feedback-loop project**. If it's being cut entirely from the curriculum (not just renumbered), Tier 2 loses its only hands-on motor-driving project, and Tier 3 jumps from "reading sensors over WiFi" (202) straight to "IoT dashboards" (302) without ever covering DC motor control or BLE.
+```
+ROBOTICS FOR KIDS: ESP32 TRACK
+A Three-Tier Progressive Curriculum (Ages 10–15)
 
-If these three are just being **shelved as optional/elective modules** rather than removed from the program, you could list them separately:
+Tier 1 — DCC 100: Foundations of Embedded Electronics
+Tier 2 — DCC 200: Sensors, Networking & Display Systems
+Tier 3 — DCC 300: Wireless Systems & Applied Robotics
 
-| Code | Title | Status |
-|------|-------|--------|
-| DCC 203 | Feedback Loops & Motor Control | Elective / Optional |
-| DCC 204 | Timing, Interrupts & Game Logic | Elective / Optional |
-| DCC 301 | Bluetooth Robotics | Elective / Optional |
+Total: 7 hands-on projects | 14 sessions | ~21 instructional hours
+```
 
-Want me to keep them as electives, or are they fully cut from the program?
+---
+
+Want this as a downloadable `.md` file, or shall I move on to the full syllabus (prerequisites, week-by-week schedule)?
