@@ -1,2 +1,57 @@
-# dcc
-delta cc
+Here's the raw Markdown source — copy everything in the block below exactly as-is (including the `#`, `|`, `-`, and `>` characters) and paste it into your `.md` file on GitHub:
+
+```markdown
+# Robotics for Kids: ESP32 Track — DCC Course Catalog
+
+A progressive curriculum for ages 10–15, built around the ESP32 microcontroller.
+
+## Tier 1 — Foundations (Ages 10–11)
+
+| Code | Title | Project |
+|------|-------|---------|
+| DCC 101 | Intro to Circuits & GPIO | Blink & Breathe (LED, PWM, SOS) |
+| DCC 102 | Analog Sensing Basics | Smart Nightlight (LDR) |
+| DCC 103 | Sensors & Alarms | Distance Alarm (ultrasonic + buzzer) |
+
+> **Tier 1 Learning Outcomes:** GPIO input/output, PWM fundamentals, analog reading, basic conditionals, first program upload.
+
+## Tier 2 — Sensors, Display & Networking (Ages 11–13)
+
+| Code | Title | Project |
+|------|-------|---------|
+| DCC 201 | Data Display Systems | Weather Station (DHT22 + OLED, I2C) |
+| DCC 202 | Networking Fundamentals | WiFi-Controlled LED Panel (web server) |
+
+> **Tier 2 Learning Outcomes:** I2C communication, WiFi/HTTP basics, sensor-to-display pipelines, web server fundamentals.
+
+## Tier 3 — Wireless Systems & Advanced Control (Ages 13–15)
+
+| Code | Title | Project |
+|------|-------|---------|
+| DCC 302 | IoT & Cloud Systems | Environment Monitor + Cloud Dashboard |
+| DCC 303 | Wireless Sensor Networks & Motion Control | Gesture-Controlled LED/Servo Breadboard (capstone) |
+
+> **Tier 3 Learning Outcomes:** IoT/MQTT/HTTP APIs, ESP-NOW peer-to-peer wireless, IMU sensor fusion, signal filtering, multi-board systems.
+
+## Full Catalog Table
+
+| Code | Course Title | Core Skill | Hardware Focus | Age |
+|------|--------------|-----------|-----------------|-----|
+| DCC 101 | Intro to Circuits & GPIO | Digital I/O, PWM | LED | 10–11 |
+| DCC 102 | Analog Sensing Basics | ADC, thresholds | LDR | 10–11 |
+| DCC 103 | Sensors & Alarms | Digital sensors, output | Ultrasonic, buzzer | 10–11 |
+| DCC 201 | Data Display Systems | I2C, display libraries | DHT22, OLED | 11–13 |
+| DCC 202 | Networking Fundamentals | WiFi, HTTP, web server | NeoPixels | 11–13 |
+| DCC 302 | IoT & Cloud Systems | MQTT/HTTP APIs, dashboards | Air quality sensors | 13–15 |
+| DCC 303 | Wireless Sensor Networks & Motion Control | ESP-NOW, IMU, filtering | MPU6050, LEDs/servo | 13–15 |
+
+## Program Summary
+
+- **Tier 1 — DCC 100:** Foundations of Embedded Electronics
+- **Tier 2 — DCC 200:** Sensors, Networking & Display Systems
+- **Tier 3 — DCC 300:** Wireless Systems & Applied Robotics
+
+**Total:** 7 hands-on projects · 14 sessions · ~21 instructional hours
+```
+
+If pasting still doesn't render, the issue is the destination on GitHub (e.g. a code block, raw view, or non-`.md` file) rather than the text itself — see my note above on where Markdown renders vs. shows as plain text.
