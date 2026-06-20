@@ -33,15 +33,15 @@ A progressive curriculum for ages 10–15, built around the ESP32 microcontrolle
 
 ## Full Catalog Table
 
-| Code | Course Title | Core Skill | Hardware Focus | 
-|------|--------------|-----------|-----------------|-----|
+| Code | Course Title | Core Skill | Hardware Focus |
+|------|--------------|-----------|-----------------|
 | DCC 101 | Intro to Circuits & GPIO | Digital I/O, PWM | LED |
 | DCC 102 | Analog Sensing Basics | ADC, thresholds | LDR |
 | DCC 103 | Sensors & Alarms | Digital sensors, output | Ultrasonic, buzzer |
 | DCC 201 | Data Display Systems | I2C, display libraries | DHT22, OLED |
-| DCC 202 | Networking Fundamentals | WiFi, HTTP, web server | NeoPixels | 
-| DCC 302 | IoT & Cloud Systems | MQTT/HTTP APIs, dashboards | Air quality sensors | 
-| DCC 303 | Wireless Sensor Networks & Motion Control | ESP-NOW, IMU, filtering | MPU6050, LEDs/servo | 
+| DCC 202 | Networking Fundamentals | WiFi, HTTP, web server | NeoPixels |
+| DCC 302 | IoT & Cloud Systems | MQTT/HTTP APIs, dashboards | Air quality sensors |
+| DCC 303 | Wireless Sensor Networks & Motion Control | ESP-NOW, IMU, filtering | MPU6050, LEDs/servo |
 
 ## Program Summary
 
