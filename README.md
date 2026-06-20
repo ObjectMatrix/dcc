@@ -1,6 +1,6 @@
 Here's the raw Markdown source — copy everything in the block below exactly as-is (including the `#`, `|`, `-`, and `>` characters) and paste it into your `.md` file on GitHub:
 
-```markdown
+
 # Robotics for Kids: ESP32 Track — DCC Course Catalog
 
 A progressive curriculum for ages 10–15, built around the ESP32 microcontroller.
@@ -52,6 +52,6 @@ A progressive curriculum for ages 10–15, built around the ESP32 microcontrolle
 - **Tier 3 — DCC 300:** Wireless Systems & Applied Robotics
 
 **Total:** 7 hands-on projects · 14 sessions · ~21 instructional hours
-```
+
 
 If pasting still doesn't render, the issue is the destination on GitHub (e.g. a code block, raw view, or non-`.md` file) rather than the text itself — see my note above on where Markdown renders vs. shows as plain text.
