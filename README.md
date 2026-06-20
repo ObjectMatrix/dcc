@@ -25,8 +25,8 @@ A progressive curriculum for ages 10–15, built around the ESP32 microcontrolle
 
 | Code | Title | Project |
 |------|-------|---------|
-| DCC 302 | IoT & Cloud Systems | Environment Monitor + Cloud Dashboard |
-| DCC 303 | Wireless Sensor Networks & Motion Control | Gesture-Controlled LED/Servo Breadboard (capstone) |
+| DCC 301 | IoT & Cloud Systems | Environment Monitor + Cloud Dashboard |
+| DCC 302 | Wireless Sensor Networks & Motion Control | Gesture-Controlled LED/Servo Breadboard (capstone) |
 
 > **Tier 3 Learning Outcomes:** IoT/MQTT/HTTP APIs, ESP-NOW peer-to-peer wireless, IMU sensor fusion, signal filtering, multi-board systems.
 
@@ -47,8 +47,8 @@ A progressive curriculum for ages 10–15, built around the ESP32 microcontrolle
 | DCC 103 | Sensors & Alarms | Digital sensors, output | Ultrasonic, buzzer |
 | DCC 201 | Data Display Systems | I2C, display libraries | DHT22, OLED |
 | DCC 202 | Networking Fundamentals | WiFi, HTTP, web server | NeoPixels |
-| DCC 302 | IoT & Cloud Systems | MQTT/HTTP APIs, dashboards | Air quality sensors |
-| DCC 303 | Wireless Sensor Networks & Motion Control | ESP-NOW, IMU, filtering | MPU6050, LEDs/servo |
+| DCC 301 | IoT & Cloud Systems | MQTT/HTTP APIs, dashboards | Air quality sensors |
+| DCC 302 | Wireless Sensor Networks & Motion Control | ESP-NOW, IMU, filtering | MPU6050, LEDs/servo |
 | DCC 401 | Software-Defined Radio Basics | RF signal decoding, ADS-B | RTL-SDR dongle |
 
 ## Program Summary
