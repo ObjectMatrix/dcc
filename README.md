@@ -1,4 +1,4 @@
-# Robotics for youth: ESP32 Track - DCC Course Catalog
+# Robotics for Youth: ESP32 Track - DCC Course Catalog
 
 A progressive curriculum for ages 10–15, built around the ESP32 microcontroller.
 
