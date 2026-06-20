@@ -35,13 +35,13 @@ A progressive curriculum for ages 10–15, built around the ESP32 microcontrolle
 
 | Code | Course Title | Core Skill | Hardware Focus | Age |
 |------|--------------|-----------|-----------------|-----|
-| DCC 101 | Intro to Circuits & GPIO | Digital I/O, PWM | LED | 10–11 |
-| DCC 102 | Analog Sensing Basics | ADC, thresholds | LDR | 10–11 |
-| DCC 103 | Sensors & Alarms | Digital sensors, output | Ultrasonic, buzzer | 10–11 |
-| DCC 201 | Data Display Systems | I2C, display libraries | DHT22, OLED | 11–13 |
-| DCC 202 | Networking Fundamentals | WiFi, HTTP, web server | NeoPixels | 11–13 |
-| DCC 302 | IoT & Cloud Systems | MQTT/HTTP APIs, dashboards | Air quality sensors | 13–15 |
-| DCC 303 | Wireless Sensor Networks & Motion Control | ESP-NOW, IMU, filtering | MPU6050, LEDs/servo | 13–15 |
+| DCC 101 | Intro to Circuits & GPIO | Digital I/O, PWM | LED |
+| DCC 102 | Analog Sensing Basics | ADC, thresholds | LDR |
+| DCC 103 | Sensors & Alarms | Digital sensors, output | Ultrasonic, buzzer |
+| DCC 201 | Data Display Systems | I2C, display libraries | DHT22, OLED |
+| DCC 202 | Networking Fundamentals | WiFi, HTTP, web server | NeoPixels | 
+| DCC 302 | IoT & Cloud Systems | MQTT/HTTP APIs, dashboards | Air quality sensors | 
+| DCC 303 | Wireless Sensor Networks & Motion Control | ESP-NOW, IMU, filtering | MPU6050, LEDs/servo | 
 
 ## Program Summary
 
