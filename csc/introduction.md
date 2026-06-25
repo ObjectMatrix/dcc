@@ -49,25 +49,24 @@ We just happen to practice it on these little rectangular boxes.
 
 ---
 
-Now let me tell you what I've watched happen in this program.
+**Now let me tell you what I've watched happen in this program.**
 
-I've watched a kid who said "I'm not a math person" spend forty-five minutes debugging a single line of code — not because anyone told him to — but because he had to know why it wasn't working.
-
+We've watched a kid who said "I'm not a math person" spend forty-five minutes debugging a single line of code — not because anyone told him to — but because he had to know why it wasn't working.
 That's not a computer skill. That's persistence. That's intellectual courage.
 
-I've watched a student who barely spoke in class stand up and explain to her teammates exactly why their sensor was reading the wrong temperature. Clearly. Confidently. Correctly.
-
+We've watched a student who barely spoke in class stand up and explain to her teammates exactly why their sensor was reading the wrong temperature.  
+Clearly. Confidently. Correctly.
 That's not coding. That's communication. That's leadership.
 
-I've watched students argue — genuinely argue — about the most elegant way to solve a problem. Not the fastest. Not the easiest. The most elegant.
-
-That is aesthetic thinking. That is craft.
+We've watched students argue — genuinely argue — about the most elegant way to solve a problem. 
+Not the fastest. Not the easiest. The most elegant.
+That is aesthetic thinking. That is craft.  
 
 None of that lives inside the computer. All of it lives inside the student.
 
 ---
 
-So parents — I want to speak to you directly for a moment.
+**So parents** — We want to speak to you directly for a moment.
 I know some of you are thinking: is this practical? Will this help my child get a job?
 Yes. Absolutely yes. The world runs on people who can think systematically.
 
@@ -82,12 +81,13 @@ The kid who learns that failure is just information — that kid is unstoppable.
 
 ---
 
-And to the students — I'll leave you with this.
+**And to the students** — I'll leave you with this.  
 
-The most powerful thing in this room is not the WiFi. It's not the sensor. It's not even the code.
-It's the moment when something doesn't work — and instead of giving up, you lean in and ask why.
-That moment. That why. That is the whole thing.
+The most powerful thing in this room is not the WiFi.  
+It's not the sensor. It's not even the code.  
+It's the moment when something doesn't work — and instead of giving up, you lean in and ask why.  
+That moment. That why. That is the whole thing.  
 
-The computer is just the telescope.
-You are the astronomer.
+The computer is just the telescope.  
+You are the astronomer.  
 Welcome to DCC.
