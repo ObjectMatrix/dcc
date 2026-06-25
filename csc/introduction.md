@@ -23,17 +23,19 @@ Here's what I need you to understand — and this might be the most important th
 We are not here to learn about computers.
 
 A man named Edsger Dijkstra — one of the greatest minds in the history of this field — said it perfectly.  
-He said `computer science` is no more about computers than astronomy is about telescopes.  
+He said `computer science` is no more about `computers` than `astronomy` is about `telescopes` or `microscope` about `Biology`.  
 
 Let that land for a second.
 
-Astronomers study stars. They study black holes and galaxies and the birth of the universe. The telescope is just how they look. Take away the telescope — the curiosity is still there. The questions are still there.
+Biology study life, Astronomers study stars. They study black holes and galaxies and the birth of the universe.  
+The telescope is just how they look.  
+Take away the telescope — the curiosity is still there. The questions are still there.
 
 Same thing here.
 
 ---
 
-What we are actually studying is something much older than any computer.
+### What we are actually studying is something much older than any computer.
 
 We are studying how to think.
 
