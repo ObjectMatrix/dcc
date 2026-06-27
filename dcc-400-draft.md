@@ -1,6 +1,6 @@
-<img width="680" height="460" alt="dcc-400-servos" src="https://github.com/user-attachments/assets/3ec3610c-7699-4b8f-a179-04881e7ba02a" />
-<img width="1024" height="559" alt="ol844" src="https://github.com/user-attachments/assets/7b8d4a69-7fad-4489-8de4-4d76f63adb13" />
 # 🦾 DCC-400: Wrist-Controlled Robotic Arm  
+<img width="680" height="460" alt="dcc-400-servos" src="https://github.com/user-attachments/assets/3ec3610c-7699-4b8f-a179-04881e7ba02a" />
+
 
 ### Tilt your wrist, and a robot arm copies your every move. No strings attached!
 
@@ -63,7 +63,6 @@ This is the set of laser-cut parts and screws you build into the physical arm. I
 ---
 
 ## 🦿 The Four Servos, and What Each One Does  
-
 
 A 4-joint arm needs **4 servos** because each servo can only move one joint. Here is where they all sit:
 
