@@ -1,5 +1,5 @@
 # 🦾 DCC-400: Wrist-Controlled Robotic Arm  
-
+<img width="1024" height="559" alt="servo401" src="https://github.com/user-attachments/assets/301c28da-edfb-4845-b5fe-04a33cea0901" />  
 ### Tilt your wrist, and a robot arm copies your every move. No strings attached!
 
 ---
