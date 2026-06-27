@@ -61,9 +61,6 @@ This is the set of laser-cut parts and screws you build into the physical arm. I
 ---
 
 ## 🦿 The Four Servos, and What Each One Does
-![Uploadin<svg xmlns="http://www.w3.org/2000/svg" width="680" height="460" viewBox="0 0 680 460" role="img" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
-<title>The four servos of a 4-DOF robotic arm</title>
-<desc>Side view of a robotic arm. Each joint holds one servo: the base rotates the arm left and right, the shoulder lifts it up and down, the elbow bends it in and out, and the gripper opens and closes the claw.</desc>
 
 <rect x="0" y="0" width="680" height="460" rx="16" fill="#F7F6F2"/>
 
