@@ -62,50 +62,7 @@ This is the set of laser-cut parts and screws you build into the physical arm. I
 
 ## 🦿 The Four Servos, and What Each One Does  
 
-<rect x="0" y="0" width="680" height="460" rx="16" fill="#F7F6F2"/>
-
-<line x1="150" y1="419" x2="300" y2="419" stroke="#B4B2A9" stroke-width="1" stroke-dasharray="4 4"/>
-
-<line x1="210" y1="348" x2="290" y2="250" stroke="#8C8B83" stroke-width="10" stroke-linecap="round"/>
-<line x1="290" y1="250" x2="390" y2="175" stroke="#8C8B83" stroke-width="10" stroke-linecap="round"/>
-
-<line x1="396" y1="166" x2="424" y2="150" stroke="#8C8B83" stroke-width="6" stroke-linecap="round"/>
-<line x1="398" y1="184" x2="428" y2="172" stroke="#8C8B83" stroke-width="6" stroke-linecap="round"/>
-
-<rect x="160" y="405" width="100" height="14" rx="4" fill="#E2E0D8" stroke="#B4B2A9" stroke-width="0.8"/>
-<rect x="190" y="352" width="40" height="55" rx="6" fill="#E2E0D8" stroke="#B4B2A9" stroke-width="0.8"/>
-
-<circle cx="210" cy="392" r="15" fill="#F0997B" stroke="#B8501F" stroke-width="1"/>
-<text x="210" y="392" text-anchor="middle" dominant-baseline="central" fill="#4A1B0C" font-size="14" font-weight="600">1</text>
-<circle cx="210" cy="348" r="15" fill="#F0997B" stroke="#B8501F" stroke-width="1"/>
-<text x="210" y="348" text-anchor="middle" dominant-baseline="central" fill="#4A1B0C" font-size="14" font-weight="600">2</text>
-<circle cx="290" cy="250" r="15" fill="#F0997B" stroke="#B8501F" stroke-width="1"/>
-<text x="290" y="250" text-anchor="middle" dominant-baseline="central" fill="#4A1B0C" font-size="14" font-weight="600">3</text>
-<circle cx="390" cy="175" r="15" fill="#F0997B" stroke="#B8501F" stroke-width="1"/>
-<text x="390" y="175" text-anchor="middle" dominant-baseline="central" fill="#4A1B0C" font-size="14" font-weight="600">4</text>
-
-<circle cx="225" cy="392" r="2" fill="#9C9A92"/>
-<line x1="225" y1="392" x2="474" y2="392" stroke="#B4B2A9" stroke-width="0.8" stroke-dasharray="4 3"/>
-<text x="482" y="389" fill="#2C2C2A" font-size="15" font-weight="600">1. Base</text>
-<text x="482" y="407" fill="#5F5E5A" font-size="13">Rotates left &amp; right</text>
-
-<circle cx="225" cy="348" r="2" fill="#9C9A92"/>
-<line x1="225" y1="348" x2="474" y2="322" stroke="#B4B2A9" stroke-width="0.8" stroke-dasharray="4 3"/>
-<text x="482" y="319" fill="#2C2C2A" font-size="15" font-weight="600">2. Shoulder</text>
-<text x="482" y="337" fill="#5F5E5A" font-size="13">Lifts up &amp; down</text>
-
-<circle cx="305" cy="250" r="2" fill="#9C9A92"/>
-<line x1="305" y1="250" x2="474" y2="228" stroke="#B4B2A9" stroke-width="0.8" stroke-dasharray="4 3"/>
-<text x="482" y="225" fill="#2C2C2A" font-size="15" font-weight="600">3. Elbow</text>
-<text x="482" y="243" fill="#5F5E5A" font-size="13">Bends in &amp; out</text>
-
-<circle cx="405" cy="175" r="2" fill="#9C9A92"/>
-<line x1="405" y1="175" x2="474" y2="150" stroke="#B4B2A9" stroke-width="0.8" stroke-dasharray="4 3"/>
-<text x="482" y="147" fill="#2C2C2A" font-size="15" font-weight="600">4. Gripper</text>
-<text x="482" y="165" fill="#5F5E5A" font-size="13">Opens &amp; closes claw</text>
-</svg>  
-
-
+<img width="1024" height="559" alt="ol844" src="https://github.com/user-attachments/assets/7b8d4a69-7fad-4489-8de4-4d76f63adb13" />
 A 4-joint arm needs **4 servos** because each servo can only move one joint. Here is where they all sit:
 
 | # | Joint | What it does |
