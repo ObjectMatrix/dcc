@@ -61,7 +61,7 @@ This is the set of laser-cut parts and screws you build into the physical arm. I
 ---
 
 ## 🦿 The Four Servos, and What Each One Does
-
+[Servos](images/dcc-400-servos.svg)
 A 4-joint arm needs **4 servos** because each servo can only move one joint. Here is where they all sit:
 
 | # | Joint | What it does |
