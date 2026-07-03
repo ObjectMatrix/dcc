@@ -208,8 +208,8 @@ import time
 servo = PWM(Pin(19), freq=50)
 
 def angle_to_duty(angle):
-    min_duty = 40
-    max_duty = 115
+    min_duty = 40 # also try 26
+    max_duty = 115 #  also try 123
     return int(min_duty + (angle / 180) * (max_duty - min_duty))
 
 def move_to(angle):
