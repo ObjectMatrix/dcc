@@ -1,5 +1,4 @@
 ## From Inner Ear to Autopilot: Sensing and Acting  
-<img width="1024" height="559" alt="drone-robit-friendship" src="../images/drone-robit-friendship.png" />
 ![Alt drone-robot-friendship.png](../images/drone-robit-friendship.png)
 
 You know how when you close your eyes and tilt your head, you can still tell which way is up and down, without even looking? That's your inner ear sensing gravity and motion and telling your brain what's happening. This tiny chip does the exact same job for a robot. It's smaller than a fingernail, and it constantly feels which way gravity is pulling on it, that's how it knows if the board is level, tilted left, tilted right, or upside down, even though it can't "see" anything at all.
