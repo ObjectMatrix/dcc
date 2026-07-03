@@ -54,7 +54,7 @@ The MPU-9250/6500 does the exact same job, but for the ESP32 instead of a person
 It talks to the ESP32 over two wires (called I2C, think of it as a two-wire conversation), and only needs 3.3V of power to run, barely more than two AA batteries. Either the MPU-9250 or MPU-6500 works the same way for this section, since only the accelerometer, the "gravity-feeling" part, is used here.
 
 ## 1.4 Wiring
-![Alt Sensors](../images/sensor.png)
+![Alt Sensors](../images/sensor.jpg)
 The ESP32 is powered through its USB cable, plugged into a laptop or power bank, that's what turns the board on. The IMU then connects to the ESP32 and draws its power from the ESP32's own 3V3 pin.
 
 ```
