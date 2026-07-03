@@ -167,8 +167,8 @@ Same power rule as before: the ESP32 is powered by its own USB cable. The servo 
                          v
    SG90 Servo          ESP32
      Signal (orange) <---  D19
-     VCC (red)        <---  5V
-     GND (brown)       <---  GND
+     VCC (red)       <---  5V
+     GND (brown)     <---  GND
 ```
 
 > If using an external power source for the servo instead of the ESP32's own 5V pin, remember to still connect that external source's ground to the ESP32's GND, both grounds must be shared.
