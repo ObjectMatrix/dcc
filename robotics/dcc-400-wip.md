@@ -1,11 +1,6 @@
 ## From Inner Ear to Autopilot: Sensing and Acting  
 <img width="1024" height="559" alt="drone-robit-friendship" src="../images/drone-robit-friendship.png" />
 
-Before combining a sensor and a motor into one reacting system, this module builds and understands each half on its own. 
-`Section 1` teaches a board to feel its own orientation, the same core idea that keeps a `drone stable` in the air.
-`Section 2` teaches a board to move something to an exact position, the same core idea that steers a drone's motors. 
-Only once both halves make sense separately do they get wired together.  
-
 You know how when you close your eyes and tilt your head, you can still tell which way is up and down, without even looking? That's your inner ear sensing gravity and motion and telling your brain what's happening. This tiny chip does the exact same job for a robot. It's smaller than a fingernail, and it constantly feels which way gravity is pulling on it, that's how it knows if the board is level, tilted left, tilted right, or upside down, even though it can't "see" anything at all.
 Why does a robot need this? Without a sensor like this, a robot has no idea what's happening to its own body. It wouldn't know if it fell over, got picked up, or tilted sideways. In your project, this sensor is what lets the ESP32 "feel" the tilt, and that feeling is what tells the servo which way to point.
 And here's the cool part: this exact idea is also how drones fly.
