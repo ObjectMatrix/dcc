@@ -1,5 +1,6 @@
 ## From Inner Ear to Autopilot: Sensing and Acting  
 <img width="1024" height="559" alt="drone-robit-friendship" src="../images/drone-robit-friendship.png" />
+![Alt drone-robot-friendship.png](../images/drone-robit-friendship.png)
 
 You know how when you close your eyes and tilt your head, you can still tell which way is up and down, without even looking? That's your inner ear sensing gravity and motion and telling your brain what's happening. This tiny chip does the exact same job for a robot. It's smaller than a fingernail, and it constantly feels which way gravity is pulling on it, that's how it knows if the board is level, tilted left, tilted right, or upside down, even though it can't "see" anything at all.
 Why does a robot need this? Without a sensor like this, a robot has no idea what's happening to its own body. It wouldn't know if it fell over, got picked up, or tilted sideways. In your project, this sensor is what lets the ESP32 "feel" the tilt, and that feeling is what tells the servo which way to point.
@@ -53,7 +54,7 @@ The MPU-9250/6500 does the exact same job, but for the ESP32 instead of a person
 It talks to the ESP32 over two wires (called I2C, think of it as a two-wire conversation), and only needs 3.3V of power to run, barely more than two AA batteries. Either the MPU-9250 or MPU-6500 works the same way for this section, since only the accelerometer, the "gravity-feeling" part, is used here.
 
 ## 1.4 Wiring
-<img  src="../images/sensor.png" />
+![Alt Sensors](../images/senso.png)
 The ESP32 is powered through its USB cable, plugged into a laptop or power bank, that's what turns the board on. The IMU then connects to the ESP32 and draws its power from the ESP32's own 3V3 pin.
 
 ```
