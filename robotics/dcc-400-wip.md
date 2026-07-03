@@ -1,4 +1,4 @@
-## From Inner Ear to Autopilot: Sensing and Acting  
+## From Inner Ear to Autopilot
 ![Alt drone-robot-friendship.png](../images/drone-robit-friendship.png)
 
 You know how when you close your eyes and tilt your head, you can still tell which way is up and down, without even looking? That's your inner ear sensing gravity and motion and telling your brain what's happening. This tiny chip does the exact same job for a robot. It's smaller than a fingernail, and it constantly feels which way gravity is pulling on it, that's how it knows if the board is level, tilted left, tilted right, or upside down, even though it can't "see" anything at all.
@@ -6,7 +6,7 @@ Why does a robot need this? Without a sensor like this, a robot has no idea what
 And here's the cool part: this exact idea is also how drones fly.
 A drone's flight controller (its "brain") uses a sensor just like this one, sometimes the very same chip, to sense which way it's tilting hundreds of times every second. That's how it knows it's drifting to one side and needs to speed up or slow down different propellers to correct itself and stay steady in the air.  
 
-# From Inner Ear to Autopilot: Sensing and Acting
+# Sensing and Acting
 
 Before combining a sensor and a motor into one reacting system, this module builds and understands each half on its own. Section 1 teaches a board to feel its own orientation, the same core idea that keeps a drone stable in the air. Section 2 teaches a board to move something to an exact position, the same core idea that steers a drone's motors. Only once both halves make sense separately do they get wired together.
 
@@ -52,10 +52,37 @@ The MPU-9250/6500 does the exact same job, but for the ESP32 instead of a person
 
 It talks to the ESP32 over two wires (called I2C, think of it as a two-wire conversation), and only needs 3.3V of power to run, barely more than two AA batteries. Either the MPU-9250 or MPU-6500 works the same way for this section, since only the accelerometer, the "gravity-feeling" part, is used here.
 
+### Understanding X, Y, Z
+
+The sensor doesn't just say "you're tilted", it reports gravity as three separate numbers, one for each direction in 3D space: **X**, **Y**, and **Z**. Think of these as three rulers, all meeting at the center of the chip, each pointing a different way.
+
+```
+              Z (Yaw)
+              |
+              |
+              |________ Y (Pitch)
+             /
+            /
+           X (Roll)
+```
+
+- **X-axis (Roll)**: runs left-to-right across the board
+- **Y-axis (Pitch)**: runs front-to-back across the board
+- **Z-axis (Yaw)**: runs straight up out of the board's face
+
+When the board sits perfectly flat on a table, gravity pulls almost entirely on the **Z-axis**, since "down" is straight through the board. The X and Y readings stay close to zero.
+
+| If you tilt the board... | The number that changes the most | What it's called |
+| --- | --- | --- |
+| Left or right (like tipping a book sideways) | **X** | Roll |
+| Forward or backward (like nodding your head) | **Y** | Pitch |
+| Spinning flat, like a record on a turntable | (needs the gyroscope, not the accelerometer) | Yaw |
+
+> **Try it with your hand:** hold your hand flat, palm down, that's Z pointing down through your palm, X and Y near zero. Now tip your hand left, like pouring out a cup, X changes. Now tip it forward instead, like nodding, Y changes. Spin your hand flat like a steering wheel, neither X nor Y captures that well, that's yaw, and it needs a different part of the sensor.
+
+This project only uses the relationship between **X and Z** to calculate roll, since the goal is a simple left/right tilt reaction. That's exactly what `read_roll_angle()` is doing in the code below, comparing the X and Z readings to work out how far the board has rolled to one side.
+
 ## 1.4 Wiring
-<p align="center">
-  <img src="../images/sensor.jpg" alt="ESP32 pinout diagram" width="400">
-</p>
 
 The ESP32 is powered through its USB cable, plugged into a laptop or power bank, that's what turns the board on. The IMU then connects to the ESP32 and draws its power from the ESP32's own 3V3 pin.
 
