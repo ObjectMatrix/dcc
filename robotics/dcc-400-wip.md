@@ -1,5 +1,5 @@
 ## From Inner Ear to Autopilot: Sensing and Acting  
-<img width="1024" height="559" alt="drone-robit-friendship" src="https://github.com/user-attachments/assets/8bd87c88-5684-49eb-afee-fa4c7c96cced" />
+<img width="1024" height="559" alt="drone-robit-friendship" src='../images/drone-robit-friendship.png" />
 
 Before combining a sensor and a motor into one reacting system, this module builds and understands each half on its own. 
 `Section 1` teaches a board to feel its own orientation, the same core idea that keeps a `drone stable` in the air.
