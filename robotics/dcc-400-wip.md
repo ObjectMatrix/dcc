@@ -153,9 +153,25 @@ Run this and tilt the board. The printed number should climb toward positive val
 
 Same board as Section 1. In this section, its only job is to command a servo to move to specific, exact angles.
 
-### The SG90 servo (the muscle)
+### The SG90 servo (the board's arm)
 
-A small motor that moves to an exact angle you tell it, between 0 and 180 degrees, and holds that position until told otherwise.
+Think about how your arm works. Your brain doesn't just tell your arm "move", it tells it exactly how far to move, and your arm holds that exact position until your brain says otherwise. Point at something, and your arm stays pointed there, it doesn't drift back down on its own.
+
+A servo does the exact same job for the ESP32. It's a small motor with a gear and a positioning sensor built inside, and instead of just spinning forever like a fan motor, you tell it an exact angle, anywhere from 0 to 180 degrees, and it moves there and holds, just like your arm holding a pointing position.
+
+```
+   0°                90°               180°
+    \                 |                 /
+     \                |                /
+      \_______________|_______________/
+              SG90 servo range
+```
+
+- **0°**: fully rotated to one side
+- **90°**: centered, straight up
+- **180°**: fully rotated to the other side
+
+It talks to the ESP32 over a single wire (called the signal wire), using something called PWM, short for pulse-width modulation. Think of PWM like Morse code for angles: the ESP32 sends the servo a series of short electrical pulses, and how long each pulse lasts tells the servo exactly which angle to move to. A short pulse might mean 0°, a slightly longer pulse might mean 90°, and so on. The servo reads that pulse length dozens of times per second and adjusts itself to match.
 
 ## 2.2 Wiring
 
