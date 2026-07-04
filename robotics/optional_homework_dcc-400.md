@@ -38,6 +38,32 @@ anything nearby.
 
 ---
 
+## Where Do We Actually See This in Real Life?
+
+This isn't just a cool trick, it's used in things you've probably seen
+or ridden in already:
+
+- **Parking sensors in cars** — that beeping that gets faster the
+  closer you get to the car behind you? That's an ultrasonic sensor
+  bolted to the bumper, doing the exact same math you just learned.
+- **Robot vacuums** — they use sensors like this to know when a wall
+  or the couch is coming up, so they can turn instead of crashing.
+- **Automatic hand sanitizer / soap dispensers** — the sensor "sees"
+  your hand get close and squirts soap without you touching anything.
+- **Water tanks** — some tanks use an ultrasonic sensor pointed down
+  at the water to measure how full they are, without ever touching the
+  water itself.
+- **Bats and dolphins** — they've been doing this trick with their own
+  bodies for millions of years, way before humans built a single
+  sensor. Scientists actually got the idea for sonar and ultrasonic
+  sensors by studying how bats hunt in total darkness.
+
+The reason engineers love this sensor is that it measures distance
+**without ever touching the object**. No moving parts, nothing that
+wears out from bumping into things, just sound and a stopwatch.
+
+---
+
 ## Meet the Two Pins: TRIG and ECHO
 
 The ultrasonic sensor (called an **HC-SR04**) has two important pins that
