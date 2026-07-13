@@ -1,93 +1,46 @@
-# DCC: Ultrasonic Distance Sensing with ESP32
+# DCC-400: Ultrasonic Distance Sensing (ESP32)
 
-## What You'll Build
+This lesson can be run as classwork or homework. Students teach the ESP32 to measure distance using sound, just like a bat or a car parking sensor.
 
-By the end of this lesson, your ESP32 will be able to "see" how far away
-things are, without touching them, using sound.
+## Core Flow (same in every DCC core lesson)
 
----
+1. Build the circuit.
+2. Run the starter code.
+3. Observe what changes in real life.
+4. Explain the concept in plain words.
+5. Try a challenge.
 
-## The Big Idea: Echoes
+## Big Idea
 
-Imagine you're standing in a canyon and you shout **"HELLO!"**
+Imagine shouting in a canyon and hearing the echo bounce back. The longer the echo takes, the farther the wall. The HC-SR04 sensor does the same trick with a silent, super-high sound and a stopwatch: it shouts, times the echo, and turns that time into a distance.
 
-A moment later, you hear your own voice bounce back: **"...hello..."**
+- Echo comes back fast means the object is close.
+- Echo comes back slow means the object is far.
 
-That bounced-back sound is called an **echo**. And here's the cool part:
-the longer you wait to hear it, the farther away the canyon wall must be.
+## What You Will Build
 
-- Echo comes back **fast** → wall is **close**
-- Echo comes back **slow** → wall is **far away**
+A distance meter that prints how far away the nearest object is, updated once per second.
 
-Your ears and brain are secretly doing math every time you hear an echo,
-even if you've never noticed it. The ultrasonic sensor does the exact
-same trick, just with a stopwatch instead of a brain.
+## What You Will Learn
 
----
+- How the trigger-and-echo method measures distance
+- What "ultrasonic" means (sound too high for humans to hear)
+- How to turn travel time into distance with simple math
+- Why we protect a GPIO pin with a voltage divider
+- How this becomes the Sense step of a robot loop
 
-## Why "Ultrasonic"?
+## Where You See This in Real Life
 
-Dogs can hear sounds that are too high-pitched for humans. A dog whistle
-is a great example — you blow it, you hear nothing, but your dog comes
-running.
-
-**Ultrasonic** just means "even higher-pitched than that." It's sound so
-high that no human, and no dog, can hear it. Our sensor "shouts" using
-this silent, super-high-pitched sound so it doesn't interrupt anyone or
-anything nearby.
-
----
-
-## Where Do We Actually See This in Real Life?
-
-This isn't just a cool trick, it's used in things you've probably seen
-or ridden in already:
-
-- **Parking sensors in cars** — that beeping that gets faster the
-  closer you get to the car behind you? That's an ultrasonic sensor
-  bolted to the bumper, doing the exact same math you just learned.
-- **Robot vacuums** — they use sensors like this to know when a wall
-  or the couch is coming up, so they can turn instead of crashing.
-- **Automatic hand sanitizer / soap dispensers** — the sensor "sees"
-  your hand get close and squirts soap without you touching anything.
-- **Water tanks** — some tanks use an ultrasonic sensor pointed down
-  at the water to measure how full they are, without ever touching the
-  water itself.
-- **Bats and dolphins** — they've been doing this trick with their own
-  bodies for millions of years, way before humans built a single
-  sensor. Scientists actually got the idea for sonar and ultrasonic
-  sensors by studying how bats hunt in total darkness.
-
-The reason engineers love this sensor is that it measures distance
-**without ever touching the object**. No moving parts, nothing that
-wears out from bumping into things, just sound and a stopwatch.
-
----
+- Car parking sensors that beep faster as you get closer
+- Robot vacuums that avoid walls and furniture
+- Automatic soap and hand-sanitizer dispensers
+- Water tanks measuring their fill level from the top
+- Bats and dolphins, who invented this trick long before we did
 
 ## Meet the Two Pins: TRIG and ECHO
 
-The ultrasonic sensor (called an **HC-SR04**) has two important pins that
-work like a mouth and a stopwatch.
-
-### TRIG — "The Mouth"
-
-TRIG is short for **Trigger**. This is how your ESP32 tells the sensor,
-**"Shout now!"**
-
-It does this by sending a tiny pulse of electricity that lasts only
-10 microseconds — that's 10 millionths of a second, way faster than you
-could ever blink. Think of it like tapping someone on the shoulder to
-say "go ahead."
-
-### ECHO — "The Stopwatch"
-
-ECHO is how the sensor reports back to your ESP32. The moment the sensor
-shouts, it flips ECHO **on** — like starting a stopwatch. The moment the
-sound bounces off something and comes back, it flips ECHO **off** —
-stopping the stopwatch.
-
-ECHO doesn't carry sound. It carries **time**. Its whole job is
-measuring how long the round trip took.
+- TRIG (the mouth): the ESP32 sends a tiny pulse here to tell the sensor "shout now!"
+- ECHO (the stopwatch): the sensor turns this pin ON when the shout leaves and OFF when the echo returns. The time in between is what we measure.
 
 ```
 TRIG: __|‾|________________________
@@ -96,49 +49,41 @@ TRIG: __|‾|________________________
 ECHO: _______|‾‾‾‾‾‾‾‾‾‾‾‾‾|________
              ^             ^
         shout sent    echo comes back
-        (ECHO turns    (ECHO turns
-           ON)             OFF)
 
              <-- this is the time we measure -->
 ```
 
----
-
 ## Turning Time Into Distance
 
-Sound always travels through air at roughly the same speed:
-about **343 meters every second**. Since we know that speed, and we
-just measured how long the round trip took, we can work out the
-distance:
+Sound travels about 343 meters every second. Since we know the speed and we measured the time, we can find the distance:
 
 ```
 distance = (time the sound traveled) x (speed of sound) / 2
 ```
 
-**Why divide by 2?** Because the sound had to travel to the object AND
-all the way back — just like your shout had to travel to the canyon
-wall and back to your ears. We only want the distance to the wall, not
-the whole round trip.
-
----
+We divide by 2 because the sound had to go to the object AND come back. We only want the one-way distance.
 
 ## Try It Without Electronics First
 
-Before touching the ESP32, try this with a partner:
-
 1. Stand facing a wall and clap once.
-2. Listen closely for the echo bouncing back.
-3. Walk closer to the wall and clap again. Did the echo come back
-   faster or slower?
-4. Walk farther away and try once more.
+2. Listen for the echo.
+3. Walk closer and clap again. Did the echo come back faster?
+4. Walk farther and try once more.
 
-This is the entire sensor, in human form. Everything from here is just
-teaching the ESP32 to do the same trick automatically, thousands of
-times per second, using sound too high for you to hear.
+That is the whole sensor, in human form.
 
----
+## Parts Needed
 
-## Wiring It Up
+| Part | Qty |
+| --- | --- |
+| ESP32 dev board | 1 |
+| HC-SR04 ultrasonic sensor | 1 |
+| Resistors for voltage divider (1k and 2k) | 1 each |
+| Jumper wires | 4 to 6 |
+| Breadboard | 1 |
+| USB cable | 1 |
+
+## Wiring
 
 ```
 HC-SR04              ESP32
@@ -149,111 +94,111 @@ TRIG      ----------  GPIO 26
 ECHO      -----[voltage divider]----- GPIO 27
 ```
 
-**Important safety note:** The HC-SR04's ECHO pin sends back a 5V
-signal, but the ESP32's pins only want to see 3.3V. Sending 5V into a
-GPIO pin can damage it over time. A **voltage divider** (two resistors,
-like a 1k and a 2k) placed between ECHO and the ESP32 brings that
-signal down to a safe 3.3V.
+Safety note: the ECHO pin sends back 5V, but ESP32 pins want only 3.3V. A voltage divider (a 1k and a 2k resistor) lowers that signal to a safe 3.3V. Never wire ECHO straight to the ESP32.
 
----
-
-## The Code
+## Starter Code
 
 ```python
-"""
-Ultrasonic Distance Sensor (HC-SR04) with ESP32
-MicroPython version, written for Thonny
-"""
+# Ultrasonic Distance Sensor (HC-SR04) with ESP32
+# MicroPython version, written for Thonny
 
-from machine import Pin
-import utime
+from machine import Pin   # lets our code control the ESP32 pins
+import utime              # a timer with microsecond accuracy (millionths of a second)
 
 # ---- Pin setup ----
-TRIG_PIN = 26
-ECHO_PIN = 27
+TRIG_PIN = 26             # the "shout now" pin
+ECHO_PIN = 27             # the "stopwatch" pin
 
-trig = Pin(TRIG_PIN, Pin.OUT)
-echo = Pin(ECHO_PIN, Pin.IN)
+trig = Pin(TRIG_PIN, Pin.OUT)   # TRIG sends signals OUT to the sensor
+echo = Pin(ECHO_PIN, Pin.IN)    # ECHO reads signals coming IN from the sensor
 
-# Speed of sound is about 343 meters per second at room temperature.
+# Sound travels about 0.0343 cm in one microsecond. We use this to turn time into distance.
 SOUND_SPEED_CM_PER_US = 0.0343
 
 
-def get_distance_cm():
-    """
-    SENSE step: send a chirp, time the echo, return distance in cm.
-    """
-    # Make sure the trigger pin starts low
+def get_distance_cm():    # this function does one full measurement
+    # Make sure the trigger pin starts low (quiet) before we shout
     trig.value(0)
-    utime.sleep_us(2)
+    utime.sleep_us(2)     # wait 2 microseconds to settle
 
     # Send a 10 microsecond pulse -- this is the "shout now!" signal
     trig.value(1)
     utime.sleep_us(10)
     trig.value(0)
 
-    # Wait for ECHO to turn on (the shout has left)
-    timeout_start = utime.ticks_us()
+    # Wait for ECHO to turn ON, which means the shout has left
+    timeout_start = utime.ticks_us()   # remember when we started waiting
     signal_off = timeout_start
     while echo.value() == 0:
-        signal_off = utime.ticks_us()
+        signal_off = utime.ticks_us()  # keep noting the time until ECHO turns on
         if utime.ticks_diff(signal_off, timeout_start) > 30000:
-            return -1  # nothing echoed back in time
+            return -1     # nothing echoed back in time, give up
 
-    # Wait for ECHO to turn off (the echo has returned)
+    # Wait for ECHO to turn OFF, which means the echo has returned
     signal_on = signal_off
     while echo.value() == 1:
-        signal_on = utime.ticks_us()
+        signal_on = utime.ticks_us()   # keep noting the time until ECHO turns off
         if utime.ticks_diff(signal_on, signal_off) > 30000:
-            return -1  # stuck waiting, something's wrong
+            return -1     # stuck waiting, something is wrong
 
     # How long the round trip took, in microseconds
     time_passed = utime.ticks_diff(signal_on, signal_off)
 
-    # Distance = speed x time, divided by 2 for the round trip
+    # Distance = speed x time, divided by 2 for the round trip (there and back)
     distance = (time_passed * SOUND_SPEED_CM_PER_US) / 2
-    return distance
+    return distance       # hand the answer back
 
 
 # ---- Main loop ----
 while True:
-    dist = get_distance_cm()
+    dist = get_distance_cm()   # take one measurement
 
-    if dist == -1:
+    if dist == -1:             # -1 is our code for "no echo"
         print("No echo detected. Nothing in range.")
     else:
-        print("Distance: {:.1f} cm".format(dist))
+        print("Distance: {:.1f} cm".format(dist))   # show distance, 1 decimal place
 
-    utime.sleep(1)
+    utime.sleep(1)             # wait 1 second before measuring again
 ```
 
-### Walking Through the Code, Line by Line
+## Explain the Concept
 
-| Code | What's Happening |
-|---|---|
-| `trig.value(1)` then `trig.value(0)` | The "shout now!" tap on the shoulder — a pulse just 10 microseconds long |
-| `while echo.value() == 0:` | Waiting for the shout to leave. Once ECHO flips on, we note the time |
-| `while echo.value() == 1:` | Waiting for the echo to come back. Once ECHO flips off, we note that time too |
-| `time_passed = ...` | The gap between those two times — the full round-trip travel time |
-| `distance = (time_passed * SOUND_SPEED_CM_PER_US) / 2` | Turning time into distance, and dividing by 2 for the round trip |
+- The TRIG pulse makes the sensor "shout."
+- ECHO measures how long the sound took to come back.
+- Simple math turns that time into a distance.
 
----
+## Try It Now
+
+- Move your hand slowly toward and away from the sensor and watch the numbers.
+- Change `utime.sleep(1)` to `utime.sleep_ms(200)` for faster updates.
+- Print a warning when something is closer than 10 cm.
+
+## Session Plan (90 minutes)
+
+| Time | Activity |
+| --- | --- |
+| 0:00 - 0:10 | Hook and Big Idea: clap and hear the echo |
+| 0:10 - 0:25 | Do the no-electronics wall clap experiment |
+| 0:25 - 0:45 | Wire the sensor and the voltage divider carefully |
+| 0:45 - 1:05 | Run the starter code and read live distances |
+| 1:05 - 1:20 | Try It Now challenges |
+| 1:20 - 1:30 | Concept check and cleanup |
 
 ## Troubleshooting
 
-| Symptom | Likely Cause |
-|---|---|
-| Always says "No echo detected" | Wrong power (needs 5V, not 3.3V), loose wire, or nothing within range (2cm–400cm) |
-| Works sometimes, not others | Loose breadboard connection, or a shaky voltage divider |
-| `NameError` in the code | Older version of the code — make sure `signal_off` and `signal_on` are given starting values before their loops |
-| Reading jumps around wildly | Try holding an object steady in front of the sensor; small jitter of a few mm is normal |
+| Problem | Likely Cause | Fix |
+| --- | --- | --- |
+| Always says "No echo detected" | Wrong power, loose wire, or nothing in range (2cm to 400cm) | Use 5V, recheck wires, aim at a nearby object |
+| Works sometimes, not others | Loose breadboard or shaky voltage divider | Reseat wires and resistors |
+| Readings jump around a lot | Object moving or normal jitter | Hold an object steady; a few mm of jitter is normal |
+| Numbers seem doubled | Forgot to divide by 2 | Keep the `/ 2` in the distance math |
 
----
+## Quick Concept Check
+
+1. Why do we divide the time by 2?
+2. What does the TRIG pin do?
+3. Why does ECHO need a voltage divider?
 
 ## Stretch Goal
 
-Once distance readings are steady, try adding a **buzzer** that beeps
-when something gets closer than 10cm — like a car's parking sensor.
-That turns this into a full **SENSE → DECIDE → ACT** loop: the ESP32
-*senses* the distance, *decides* if it's too close, and *acts* by
-making a sound.
+Add a buzzer that beeps when something gets closer than 10 cm, like a car parking sensor. That turns this into a full Sense, Decide, Act loop: the ESP32 senses the distance, decides if it is too close, and acts by making a sound.
