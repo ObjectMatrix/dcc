@@ -1,6 +1,6 @@
 <img width="604" height="373" alt="weather" src="https://github.com/user-attachments/assets/57b43077-53f2-438b-a890-0b6d90ade1eb" />  
 
-
+```
 
 import requests
 
@@ -81,4 +81,4 @@ print(f" Advice: {advice}")
 def show_weather(zip_code):
   weather = get_weather(zip_code)
   display_weather(zip_code, weather)
-
+```
