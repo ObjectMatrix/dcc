@@ -1,8 +1,11 @@
 <img width="604" height="373" alt="weather" src="https://github.com/user-attachments/assets/57b43077-53f2-438b-a890-0b6d90ade1eb" />  
 
+
 ```
 
+
 import requests
+
 
 
 def validate_zip(zip_code):
@@ -19,6 +22,7 @@ def get_condition(weather_code):
     if weather_code >= 95:
         return "Thunderstorm"
     return "Rainy"
+
 
 
 def get_weather(zip_code):
@@ -66,6 +70,7 @@ def get_advice(condition):
     return "Enjoy your day!"
 
 
+
 def display_weather(zip_code, weather):
     if "error" in weather:
         print(weather["error"])
@@ -78,13 +83,10 @@ def display_weather(zip_code, weather):
     print(f"  Advice: {advice}")
 
 
+
 def show_weather(zip_code):
     weather = get_weather(zip_code)
     display_weather(zip_code, weather)
 
-
-def show_weather(zip_code):
-  weather = get_weather(zip_code)
-  display_weather(zip_code, weather)
 
 ```
