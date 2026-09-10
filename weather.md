@@ -1,4 +1,5 @@
-<img width="604" height="373" alt="weather" src="https://github.com/user-attachments/assets/57b43077-53f2-438b-a890-0b6d90ade1eb" />  
+<img width="1408" height="768" alt="weather" src="https://github.com/user-attachments/assets/cd8fff7d-df60-40d7-8c41-7470fd3b372d" />
+
 
 
 ```
