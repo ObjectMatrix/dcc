@@ -10,6 +10,10 @@
 
 <hr />  
 
+<h1> Where in the Wotld Are You? Can you find your spot using lines of Latitude and Longitude?</h1>
+
+<img width="1408" height="768" alt="latlong" src="https://github.com/user-attachments/assets/6f6a7233-bd2e-4345-a4f1-6067d06e6025" />
+
 ```
 
 
