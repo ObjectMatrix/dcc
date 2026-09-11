@@ -103,3 +103,42 @@ def show_weather(zip_code):
 
 
 ```
+
+
+## Get Location given zip code
+
+```
+def get_location(zip_code):
+    """Get location info (city, state, lat, long) from ZIP code"""
+    if not validate_zip(zip_code):
+        return {"error": "That doesn't look like a valid ZIP code."}
+
+    try:
+        zip_data = requests.get(
+            f"http://api.zippopotam.us/us/{zip_code}", timeout=10
+        )
+        if zip_data.status_code == 404:
+            return {"error": f"ZIP code {zip_code} was not found."}
+        place = zip_data.json()["places"][0]
+        
+        return {
+            "zip": zip_code,
+            "city": place["place name"],
+            "state": place["state abbreviation"],
+            "latitude": place["latitude"],
+            "longitude": place["longitude"]
+        }
+    except requests.RequestException:
+        return {"error": "Could not get location data. Please try again."}
+
+# Test the function
+print("Testing get_location() function:\n")
+result = get_location("02072")
+if "error" not in result:
+    print(f"City: {result['city']}, {result['state']}")
+    print(f"Coordinates: ({result['latitude']}, {result['longitude']})")
+else:
+    print(result["error"])
+
+```
+    
