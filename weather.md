@@ -145,17 +145,7 @@ else:
 
 ## Get Weather for an Indian PIN Code
 
-[#get-weather-for-an-indian-pin-code](#get-weather-for-an-indian-pin-code)
-
-
-No GitHub connector is set up here, so I can't push a commit directly to that repo from this chat. I don't have write access to GitHub through this interface — I can only fetch/read public pages.
-
-A couple of ways to actually get it onto the page:
-
-1. **Easiest:** I give you the Markdown block below, and you paste it into the GitHub web editor (pencil icon on the file) and commit.
-2. **If you want me to do it programmatically:** you'd need to connect a GitHub-capable tool to this chat (with a token that has repo write access), or use Claude Code / the CLI locally where I could run `git` commands against a cloned copy.
-
-Here's the section, formatted to match the rest of the page, ready to paste at the bottom of `weather.md`:
+#get-weather-for-an-indian-pin-code
 
 ```markdown
 ## Get Weather for an Indian PIN Code
