@@ -147,10 +147,8 @@ else:
 
 #get-weather-for-an-indian-pin-code
 
-```markdown
-## Get Weather for an Indian PIN Code
 
-[#get-weather-for-an-indian-pin-code](#get-weather-for-an-indian-pin-code)
+## Get Weather for an Indian PIN Code
 
 ```
 def get_location_in(pin_code):
@@ -176,8 +174,10 @@ def get_location_in(pin_code):
     except requests.RequestException:
         return {"error": "Could not get location data. Please try again."}
 
-# Test the function
-```
+```  
+# Test the function  
+
+```  
 print("Testing get_location_in() function:\n")  
 result = get_location_in("110001")    # New Delhi  
 if "error" not in result:  
