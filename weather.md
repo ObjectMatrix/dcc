@@ -177,14 +177,15 @@ def get_location_in(pin_code):
         return {"error": "Could not get location data. Please try again."}
 
 # Test the function
-print("Testing get_location_in() function:\n")
-result = get_location_in("110001")  # New Delhi
-if "error" not in result:
-    print(f"City: {result['city']}, {result['state']}")
+```
+print("Testing get_location_in() function:\n")  
+result = get_location_in("110001")    # New Delhi  
+if "error" not in result:  
+    print(f"City: {result['city']}, {result['state']}")  
     print(f"Coordinates: ({result['latitude']}, {result['longitude']})")
 else:
     print(result["error"])
 ```
-```
+
 
 Want me to also suggest a GitHub connector so I can commit this directly next time?
